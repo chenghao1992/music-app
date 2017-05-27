@@ -5,6 +5,7 @@ import Message from './components/common/Message'
 import Audio from './components/music/audio'
 import { musicBoxAddAPI,currentMusicAPI,changetimeAPI,controllAPI,changeMusicAPI } from './actions/music'
 
+
 class App extends Component{
 
 	getCur(t){
