@@ -12,7 +12,7 @@ module.exports = function(initialState) {
 		const logger = createLogger();
 		createStoreWithMiddleware = applyMiddleware(thunk,logger)(createStore);
 	}
-	let store = createStoreWithMiddleware(reducers, initialState);
+	let store = createStoreWithMiddleware(reducers, initialState,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 	// get token from storage
 	store.dispatch(login(storage.get('token')));
 	return store;

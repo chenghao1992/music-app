@@ -34,9 +34,15 @@ class App extends Component{
 	}
 	 
 	render(){
-		const {currentMusic,time,controll,spin,message} = this.props;
+		const {currentMusic,time,controll,spin,message,scrollTop,firstTime} = this.props;
+		console.log('this.props-----',this.props)
+		console.log('spin',spin)
+		console.log('time',time)
+		console.log('scrollTop',scrollTop)
+		console.log('firstTime',firstTime)
 		return (
 			<div className='root'>
+				{/*加载页面*/}
 				<Spin spin={spin}/>
 				<Message data={message}/>
 				<div className='root'>{this.props.children}</div>
